@@ -1,29 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Form } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import ContextDemo from './ContextDemo';
+import Container from 'react-bootstrap/Container';
 
-const [search, setSearch] = useState('love');
-//const [apiData, setApiData] = useState([]);
+function SearchForm() {
+  const [search, setSearch] = useState('Happy');
+  const [query, setQuery] = useState(search);
+  const [apiData, setApiData] = useState([]);
 
-const SearchForm = () => {
+  useEffect(() => {
+    const getData = async () => {
+      const result = await axios.get(`https://localhost:8080/books/${search}`);
+      console.log('inside getData', result.data);
+      setApiData(result.data);
+    };
+    getData();
+  }, [query]);
+
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
+
   const handleSubmit = (event) => {
-    axios.get(`https://localhost:8080/books/${search}`).then();
     event.preventDefault();
-    console.log('Entered SearchForm');
+    setQuery(search);
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Row>
-        <Form.Control
-          id="searchbar"
-          size="lg"
-          type="text"
-          placeholder="Type something in me!"
-        />
-      </Form.Row>
-    </Form>
+    <div className="Home">
+      <div style={{ backgroundColor: 'Orange', padding: 15 }}>
+        <container>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group>
+              <Form.Control
+                size="lg"
+                type="text"
+                placeholder="Type something in me!"
+                value={search}
+                onChange={handleChange}
+              />
+            </Form.Group>
+          </Form>
+        </container>
+      </div>
+      <ContextDemo data={apiData} />
+    </div>
   );
-};
+}
+//axios.get(`https://localhost:8080/books/${search}`).then();
 
 export default SearchForm;
