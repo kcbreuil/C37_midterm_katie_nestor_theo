@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
-import SearchForm from './components/SearchForm';
-import { Container } from 'react-bootstrap';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './components/Navbar';
 
 import './App.css';
 
@@ -25,11 +23,7 @@ const App = () => {
   //       <h3>{serverMessage}</h3>
   //     </div>
   //   </AppContextProvider>
-  return (
-    <Container>
-      <SearchForm />
-    </Container>
-  );
+  return <NavBar />;
 };
 
 export default App;
