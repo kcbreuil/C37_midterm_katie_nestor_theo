@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
+import { BrowserRouter, Route } from 'react-router-dom';
+import faker from 'faker';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './components/Navbar';
+import './index.css';
 import SearchForm from './components/SearchForm';
-import { Container } from 'react-bootstrap';
+import Book from './components/Book';
 
 import './App.css';
 
 const App = () => {
-  // const [serverMessage, setServerMessage] = useState('');
+  const [randomBook, setRandomBook] = useState(null);
 
-  const fetchData = () => {};
-  fetch('');
-  //     .then((response) => response.json())
-  //     .then((data) => setServerMessage(data.message));
-  // };
+  useEffect(() => {
+    const randomWord = faker.random.word();
+    axios.get(`/books/${randomWord}`).then((res) => {
+      const firstBook = res.data.items[0];
+      setRandomBook(firstBook);
+    });
+  }, []);
 
-  // useEffect(fetchDemoData, []);
-
-  // return (
-  //   <AppContextProvider>
-  //     <div id="demo">
-  //       <h3>Hello from client/src/App.js</h3>
-  //       <ContextDemo />
-  //       <h3>{serverMessage}</h3>
-  //     </div>
-  //   </AppContextProvider>
   return (
-    <Container>
-      <SearchForm />
-    </Container>
+    <BrowserRouter>
+      <NavBar fixed="top" />
+      <Route exact path="/" component={SearchForm} />
+      <Route path="/book">
+        <Book book={randomBook} />
+      </Route>
+    </BrowserRouter>
   );
 };
 
