@@ -14,11 +14,10 @@ function NavBar() {
       <Navbar.Brand href="#home">QuaranRead</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto"></Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
+        <Nav className="mr-auto">
+          <Nav.Link href="#link">Book Of The Day</Nav.Link>
+          <Nav.Link href="#link">About</Nav.Link>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );

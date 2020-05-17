@@ -28,7 +28,6 @@ app.get('/api/demo', (request, response) => {
 // here I go again on my own //
 
 app.get('/books/:theme', async (req, res) => {
-  // console.log(req.params.theme);
   let { data } = await axios.get(
     `https://www.googleapis.com/books/v1/volumes?q=${req.params.theme} key=${process.env.REACT_APP_API_KEY}`
   );
