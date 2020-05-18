@@ -7,6 +7,7 @@ import NavBar from './components/Navbar';
 import './index.css';
 import SearchForm from './components/SearchForm';
 import Book from './components/Book';
+import About from './components/About';
 
 import './App.css';
 
@@ -27,6 +28,9 @@ const App = () => {
       <Route exact path="/" component={SearchForm} />
       <Route path="/book">
         <Book book={randomBook} />
+      </Route>
+      <Route path="/about">
+        <About />
       </Route>
     </BrowserRouter>
   );

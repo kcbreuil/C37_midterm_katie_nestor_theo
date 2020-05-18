@@ -24,14 +24,15 @@ function SearchForm() {
 
   return (
     <div className="Home">
-      <div style={{ margin: 'auto', maxWidth: 500 }}>
+      <h1>How are you feeling today?</h1>
+      <div>
         <div>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Control
                 size="lg"
                 type="text"
-                placeholder="Type something in me!"
+                placeholder="Type your Mood."
                 value={search}
                 onChange={handleChange}
               />
