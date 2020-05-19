@@ -10,13 +10,36 @@ import {
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">QuaranRead</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar
+      className="navBar"
+      expand="lg"
+      style={{ backgroundColor: '#e3dad0', color: '#344960' }}
+      fixed="top"
+    >
+      <Navbar.Brand style={{ color: '#344960' }} href="/">
+        <img
+          alt=""
+          src="./client/public/icon.png"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />
+        QuaranREAD
+      </Navbar.Brand>
+      <Navbar.Toggle className="navBar" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#link">Book Of The Day</Nav.Link>
-          <Nav.Link href="#link">About</Nav.Link>
+        <Nav className="navBar">
+          <Nav.Link href="/book" style={{ color: '#344960' }}>
+            Book Of The Day
+          </Nav.Link>
+          <Nav.Link
+            href="/about"
+            style={{
+              color: '#344960'
+            }}
+          >
+            About
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

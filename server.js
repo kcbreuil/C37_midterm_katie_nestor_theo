@@ -27,11 +27,15 @@ app.get('/api/demo', (request, response) => {
 
 // here I go again on my own //
 
-app.get('/books/:theme', async (req, res) => {
-  let { data } = await axios.get(
-    `https://www.googleapis.com/books/v1/volumes?q=${req.params.theme} key=${process.env.REACT_APP_API_KEY}`
-  );
-  const arr = [];
+// https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=AIzaSyBxskadGRKcKvpfgS9MjPyyfOJ3rGcxy4M
+
+app.get('/books/:theme/:free?', async (req, res) => {
+  const requestUrl = req.params.free
+    ? `https://www.googleapis.com/books/v1/volumes?q=${req.params.theme}&filter=free-ebooks`
+    : `https://www.googleapis.com/books/v1/volumes?q=${req.params.theme}`;
+
+  let { data } = await axios.get(requestUrl);
+
   res.send(data);
 });
 

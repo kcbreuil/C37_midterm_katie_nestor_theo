@@ -6,8 +6,19 @@ const Book = (props) => {
   if (!props.book) {
     return null;
   }
+  const title = props.book.volumeInfo.title;
+  const author = props.book.volumeInfo.authors;
+  const bookImg = props.book.volumeInfo.imageLinks.thumbnail;
 
-  return <h1>{props.book.volumeInfo.title}</h1>;
+  return (
+    <div className="book-of-day">
+      <container>
+        <h1>{title}</h1>
+        <h2>{author}</h2>
+        <img src={bookImg} alt="" />
+      </container>
+    </div>
+  );
 };
 
 export default Book;
