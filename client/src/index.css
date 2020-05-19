@@ -32,3 +32,22 @@ form {
 .book-of-day {
   margin-top: 75px;
 }
+/* 
+.book {
+  display: grid;
+}
+
+.book-image {
+  grid-row: 1 / 2;
+  grid-column: 1;
+}
+
+.book-details {
+  grid-row: 1 / 2;
+  grid-column: 2;
+}
+
+.book-description {
+  grid-row: 3;
+  grid-column: 1 / 2;
+} */
