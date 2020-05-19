@@ -20,46 +20,25 @@ const BookList = (props) => (
       // const bookImage = imageLinks.smallThumbnail;
 
       return (
-        <Container>
-          <Row>
-            <Col>
-              <a href={`/book/${book.id}`}>
-                <img src={bookImageSrc} alt="" />
-              </a>
-            </Col>
-            <Col>
-              <Row>
-                <p>{title}</p>
-              </Row>
-              <Row>
-                <p>{author}</p>
-              </Row>
-            </Col>
-          </Row>
-          <Row>
+        <div className="book">
+          <a id="book_list" />
+          <div className="book-image">
+            <a href={`/book/${book.id}`}>
+              <img src={bookImageSrc} alt="" />
+            </a>
+          </div>
+          <div className="book-details">
+            <p>{title}</p>
+            <p>{author}</p>
+          </div>
+          <div className="book-description">
             <p style={{ overflowY: 'scroll' }}>{description}</p>
-          </Row>
-        </Container>
+          </div>
+        </div>
       );
     })}
   </div>
 );
-
-// html
-{
-  /* <div className="book">
-    <div className="book-image">
-      <img />
-    </div>
-    <div className="book-details">
-      <p>title</p>
-      <p>author</p>
-    </div>
-    <div className="book-description">
-      <p>description</p>
-    </div>
-</div> */
-}
 
 // css
 

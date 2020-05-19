@@ -30,12 +30,10 @@ const About = () => {
       <br />
       <div className="about-app">
         <h1>About the App</h1>
-
         <p>
-          This app is built during the pandemic where people were forced to stay
-          home, when people stay home they have more time on there on hands to
-          pick up a book and enter the world of imagination in a app that help
-          you pick up books based upon your mood of the day.
+          This app was built during the COVID-19 pandemic. The team built the
+          quaranREAD app to give people a place where they can find new books
+          inspired by their mood of the day.
         </p>
       </div>
     </Container>

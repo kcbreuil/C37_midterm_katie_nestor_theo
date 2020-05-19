@@ -16,7 +16,7 @@ function SearchForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const url = isFree ? `/books/${search}/free` : `/books/${search}`;
+    const url = isFree ? `/books/${search}/free` : `/books/${search}#book_list`;
     axios.get(url).then((response) => {
       setApiData(response.data.items);
     });
@@ -32,7 +32,7 @@ function SearchForm() {
       return;
     }
     console.log('making request');
-    const url = isFree ? `/books/${search}/free` : `/books/${search}`;
+    const url = isFree ? `/books/${search}/free` : `/books/${search}#book_list`;
     axios.get(url).then((response) => setApiData(response.data.items));
   }, [isFree]);
 
@@ -41,6 +41,17 @@ function SearchForm() {
       <h1>How are you feeling today?</h1>
       <div>
         <div>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group>
+              <Form.Control
+                size="lg"
+                type="text"
+                placeholder="Type your Mood."
+                value={search}
+                onChange={handleChange}
+              />
+            </Form.Group>
+          </Form>
           <Button
             onClick={toggleAllBooks}
             variant={isFree ? 'secondary' : 'primary'}
@@ -53,17 +64,6 @@ function SearchForm() {
           >
             Only Free
           </Button>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group>
-              <Form.Control
-                size="lg"
-                type="text"
-                placeholder="Type your Mood."
-                value={search}
-                onChange={handleChange}
-              />
-            </Form.Group>
-          </Form>
         </div>
       </div>
       {apiData.length > 0 ? <BookList books={apiData} /> : null}

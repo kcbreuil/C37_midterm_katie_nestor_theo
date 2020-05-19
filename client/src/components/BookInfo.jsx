@@ -16,7 +16,11 @@ const BookInfo = () => {
     };
     getData();
   }, [id]);
-  return <h1>I am a banana</h1>;
+  return (
+    <>
+      <h1>I am a banana</h1>
+    </>
+  );
 };
 
 export default BookInfo;
