@@ -40,4 +40,41 @@ const BookList = (props) => (
   </div>
 );
 
+// html
+{
+  /* <div className="book">
+    <div className="book-image">
+      <img />
+    </div>
+    <div className="book-details">
+      <p>title</p>
+      <p>author</p>
+    </div>
+    <div className="book-description">
+      <p>description</p>
+    </div>
+</div> */
+}
+
+// css
+
+// .book {
+//   display: grid;
+// }
+
+// .book-image {
+//   grid-row: 1 / 2;
+//   grid-column: 1;
+// }
+
+// .book-details {
+//   grid-row: 1 / 2;
+//   grid-column: 2;
+// }
+
+// .book-description {
+//   grid-row: 3;
+//   grid-column: 1 / 2
+// }
+
 export default BookList;
