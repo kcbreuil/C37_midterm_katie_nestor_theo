@@ -18,24 +18,22 @@ const BookList = (props) => (
 
       return (
         <Container>
-          <div className="book">
-            <Row>
-              <Col>
-                <img src={bookImageSrc} alt="" />
-              </Col>
-              <Col>
-                <Row>
-                  <p>{title}</p>
-                </Row>
-                <Row>
-                  <p>{author}</p>
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <p style={{ overflowY: 'scroll' }}>{description}</p>
-            </Row>
-          </div>
+          <Row>
+            <Col>
+              <img src={bookImageSrc} alt="" />
+            </Col>
+            <Col>
+              <Row>
+                <p>{title}</p>
+              </Row>
+              <Row>
+                <p>{author}</p>
+              </Row>
+            </Col>
+          </Row>
+          <Row>
+            <p style={{ overflowY: 'scroll' }}>{description}</p>
+          </Row>
         </Container>
       );
     })}

@@ -27,5 +27,8 @@ form {
 
 .book {
   background-color: #ddc9be;
-  margin-left: 50px;
+}
+
+.book-of-day {
+  margin-top: 75px;
 }
