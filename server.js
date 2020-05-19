@@ -6,7 +6,6 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const app = express();
-require('dotenv').config();
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
