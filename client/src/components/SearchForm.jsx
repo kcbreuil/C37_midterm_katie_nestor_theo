@@ -66,7 +66,7 @@ function SearchForm() {
           </Form>
         </div>
       </div>
-      <BookList books={apiData} />
+      {apiData.length > 0 ? <BookList books={apiData} /> : null}
       <ContextDemo data={apiData} />
     </div>
   );

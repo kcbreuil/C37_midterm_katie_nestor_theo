@@ -6,11 +6,14 @@ import Col from 'react-bootstrap/Col';
 const BookList = (props) => (
   <div className="bookList">
     {props.books.map((book) => {
+      console.log(props.books);
       const title = book.volumeInfo.title;
       const author = (book.volumeInfo.authors || []).join(', ');
       const description = book.volumeInfo.description;
-      const bookImageSrc = book.volumeInfo.imageLinks.thumbnail;
-
+      let bookImageSrc = '';
+      if (book.volumeInfo.imageLinks) {
+        bookImageSrc = book.volumeInfo.imageLinks.thumbnail;
+      }
       // with destructure
       // const { title, authors, imageLinks } = book.volumeInfo;
       // const author = authors.join(', ')
@@ -20,7 +23,9 @@ const BookList = (props) => (
         <Container>
           <Row>
             <Col>
-              <img src={bookImageSrc} alt="" />
+              <a href={`/book/${book.id}`}>
+                <img src={bookImageSrc} alt="" />
+              </a>
             </Col>
             <Col>
               <Row>
