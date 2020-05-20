@@ -2,6 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Katie from '../Katie.jpg';
+import Theo from '../Theo.jpg';
 
 const About = () => {
   return (
@@ -14,7 +16,11 @@ const About = () => {
         </Row>
         <Row>
           <Col>
-            <img src="" alt="Theo" />
+            <img
+              src={Theo}
+              alt="Theo"
+              style={{ maxWidth: 200, height: 'auto' }}
+            />
             <p>Theodore McLean</p>
           </Col>
           <Col>
@@ -22,7 +28,11 @@ const About = () => {
             <p>Nestor Rivera</p>
           </Col>
           <Col>
-            <img src="" alt="Katie" />
+            <img
+              src={Katie}
+              alt="Katie"
+              style={{ maxWidth: 200, height: 'auto' }}
+            />
             <p>Katie Breuil</p>
           </Col>
         </Row>
