@@ -33,7 +33,7 @@
   color: #344960;
   margin: 'auto';
   text-align: center;
-  margin-top: 300px;
+  margin-top: 250px;
 }
 form {
   max-width: 500px;
@@ -91,6 +91,10 @@ form {
   grid-column: 3/3;
   grid-row-start: 2;
   align-self: top;
+}
+
+.book-day-author p {
+  margin: 0;
 }
 
 .book-day-description {

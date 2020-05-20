@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import BookList from './BookList';
 import ContextDemo from './ContextDemo';
+import logo from '../icon_2.png';
 
 function SearchForm() {
   const [search, setSearch] = useState('');
@@ -38,6 +39,7 @@ function SearchForm() {
 
   return (
     <div className="Home">
+      <img src={logo} style={{ maxWidth: 100, heigh: 'auto' }} />
       <h1>What would you like to learn about today?</h1>
       <div>
         <div>

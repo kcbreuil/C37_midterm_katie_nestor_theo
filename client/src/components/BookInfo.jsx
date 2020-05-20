@@ -46,8 +46,9 @@ const BookInfo = () => {
           <div style={{ fontSize: '13px' }}>By : {author}</div>
         </div>
         <div className="book-day-author">
-          <p style={{ overflowY: 'scroll', maxHeight: 20 }}>{categories}</p>
           <p>{publisher}</p>
+          <p>Page Count: {pageCount}</p>
+          <p style={{ overflowY: 'scroll', maxHeight: 20 }}>{categories}</p>
           <p>{pubDate}</p>
           <a href={preview} target="_blank">
             Book Link
