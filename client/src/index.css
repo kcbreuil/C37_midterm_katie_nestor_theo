@@ -4,7 +4,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 .about {
   padding-bottom: 10rem;
 }
@@ -42,6 +41,7 @@
   margin: 'auto';
   text-align: center;
   margin-top: 300px;
+  font-size: 20px;
 }
 form {
   max-width: 500px;
@@ -56,6 +56,7 @@ form {
 
 .book {
   background-color: #ddc9be;
+  box-shadow: 5px 5px 5px;
 }
 
 .book-day-header {
@@ -86,7 +87,6 @@ form {
   align-self: center;
 }
 
-/* 
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
@@ -111,11 +111,10 @@ form {
 
 .book {
   display: grid;
-  width: 500px;
+  width: 450px;
   border: 1px solid black;
-  margin-left: 450px;
+  margin: auto;
   padding: 10px;
-  height: 500px;
   margin-bottom: 10px;
 }
 
@@ -131,6 +130,8 @@ form {
   grid-column: 2;
   font-size: 18px;
   align-content: center;
+  justify-self: flex-start;
+  margin: auto;
 }
 
 .book-description {
