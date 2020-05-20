@@ -4,7 +4,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Nav Bar  */
+
+.about {
+  padding-bottom: 10rem;
+}
+
 .navBar {
   color: #344960;
   box-shadow: 5px 5px 5px;
@@ -14,6 +18,9 @@
 .about-team {
   color: #344960;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
 }
 
 .Home {
@@ -29,6 +36,7 @@ form {
 }
 .about-app {
   color: #344960;
+  border: saddlebrown solid 10px;
 }
 
 .book {
@@ -62,6 +70,7 @@ form {
   align-self: center;
 }
 
+/* 
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
