@@ -38,7 +38,7 @@ function SearchForm() {
 
   return (
     <div className="Home">
-      <h1>How are you feeling today?</h1>
+      <h1>What would you like to learn about today?</h1>
       <div>
         <div>
           <Form onSubmit={handleSubmit} style={{ marginTop: 15 }}>
@@ -46,7 +46,7 @@ function SearchForm() {
               <Form.Control
                 size="lg"
                 type="text"
-                placeholder="Type your Mood."
+                placeholder="Type Here."
                 value={search}
                 onChange={handleChange}
               />
@@ -57,8 +57,16 @@ function SearchForm() {
             onClick={toggleAllBooks}
             style={
               isFree
-                ? { backgroundColor: '#e3dad0', borderColor: '#e3dad0' }
-                : { backgroundColor: '#344960', borderColor: '#344960' }
+                ? {
+                    backgroundColor: '#e3dad0',
+                    borderColor: '#e3dad0',
+                    color: '#344960'
+                  }
+                : {
+                    backgroundColor: '#344960',
+                    borderColor: '#344960',
+                    color: '#e3dad0'
+                  }
             }
           >
             All
@@ -68,8 +76,16 @@ function SearchForm() {
             onClick={toggleOnlyFreeBooks}
             style={
               isFree
-                ? { backgroundColor: '#344960', borderColor: '#344960' }
-                : { backgroundColor: '#e3dad0', borderColor: '#e3dad0' }
+                ? {
+                    backgroundColor: '#344960',
+                    borderColor: '#344960',
+                    color: '#e3dad0'
+                  }
+                : {
+                    backgroundColor: '#e3dad0',
+                    borderColor: '#e3dad0',
+                    color: '#344960'
+                  }
             }
           >
             Only Free

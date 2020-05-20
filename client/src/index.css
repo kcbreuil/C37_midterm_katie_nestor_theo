@@ -4,11 +4,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
-.about {
-  padding-bottom: 10rem;
-}
-
 .navBar {
   color: #344960;
   box-shadow: 5px 5px 5px;
@@ -32,9 +27,6 @@
   margin-top: 100px;
   color: #344960;
   text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 3rem;
 }
 
 .Home {
@@ -51,7 +43,8 @@ form {
 }
 .about-app {
   color: #344960;
-  border: saddlebrown solid 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .book {
@@ -86,18 +79,18 @@ form {
   align-self: center;
 }
 
-/* 
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
   align-self: center;
 }
 
 .book-day-author {
   grid-column: 3/3;
-  grid-row: 2;
+  grid-row-start: 2;
+  align-self: top;
 }
 
 .book-day-description {
