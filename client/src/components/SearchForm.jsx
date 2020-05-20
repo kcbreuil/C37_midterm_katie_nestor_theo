@@ -48,7 +48,7 @@ function SearchForm() {
               <Form.Control
                 size="lg"
                 type="text"
-                placeholder="Type Here."
+                placeholder="Tell us all your secrets..."
                 value={search}
                 onChange={handleChange}
               />
