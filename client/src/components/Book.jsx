@@ -9,14 +9,25 @@ const Book = (props) => {
   const title = props.book.volumeInfo.title;
   const author = props.book.volumeInfo.authors;
   const bookImg = props.book.volumeInfo.imageLinks.thumbnail;
+  const description = props.book.volumeInfo.description;
 
   return (
-    <div className="book-of-day">
-      <container>
-        <h1>{title}</h1>
-        <h2>{author}</h2>
-        <img src={bookImg} alt="" />
-      </container>
+    <div>
+      <h1 className="book-day-header">Book of the day</h1>
+      <div className="book-of-day">
+        <div className="book-day-cover">
+          <img src={bookImg} alt="" />
+        </div>
+        <div className="book-day-title">
+          <p>{title}</p>
+        </div>
+        <div className="book-day-author">
+          <p>By : {author}</p>
+        </div>
+        <div className="book-day-description">
+          <p>{description}</p>
+        </div>
+      </div>
     </div>
   );
 };
