@@ -36,7 +36,10 @@ const BookInfo = () => {
   const preview = apiData.previewLink;
 
   return (
-    <Card className="bookDetails" style={{ width: '25rem' }}>
+    <Card
+      className="bookDetails"
+      style={{ width: '18rem', backgroundColor: '#ddc9be' }}
+    >
       <Card.Img variant="top" src={imgSrc} />
       <Card.Body>
         <Card.Title>{detailTitle}</Card.Title>
@@ -46,14 +49,19 @@ const BookInfo = () => {
           <p>{description}</p>
         </Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroupItem>Categories: {categories}</ListGroupItem>
+      <ListGroup
+        className="list-group-flush"
+        style={{ backgroundColor: '#ddc9be' }}
+      >
+        <ListGroupItem>{categories}</ListGroupItem>
         <ListGroupItem>{publisher}</ListGroupItem>
         <ListGroupItem>{pubDate}</ListGroupItem>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href={preview} target="_blank">
+          Book Link
+        </Card.Link>
+        <Card.Link href="#">Ebook Link</Card.Link>
       </Card.Body>
     </Card>
   );

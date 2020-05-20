@@ -81,11 +81,15 @@ form {
   overflow-y: scroll;
 }
 
+/* Main Page  */
+
 .book {
   display: grid;
   width: 500px;
   border: 1px solid black;
-  margin-left: 300px;
+  margin-left: 450px;
+  padding: 10px;
+  height: 500px;
 }
 
 .book-image {
@@ -108,14 +112,13 @@ form {
   grid-column-start: 1;
   grid-column-end: 3;
   align-content: stretch;
+  overflow-y: scroll;
 }
 
 /* Book Details Page */
 .bookDetails {
-  display: grid;
-  text-align: center;
   margin-top: 100px;
-  width: 600px;
+  margin-left: 600px;
 }
 
 .description {
