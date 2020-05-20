@@ -7,8 +7,11 @@ import Theo from '../Theo.jpg';
 
 const About = () => {
   return (
-    <Container>
+    <div className="about">
+      <h1 style={{ textAlign: 'center',marginTop: '10rem' }}>About the team</h1>
+
       <div className="about-team">
+
         <Row>
           <Col>
             <h1>About the team</h1>
@@ -36,9 +39,12 @@ const About = () => {
             <p>Katie Breuil</p>
           </Col>
         </Row>
+
       </div>
       <br />
       <div className="about-app">
+        <div class="aboutapp"></div>
+
         <h1>About the App</h1>
         <p>
           This app was built during the COVID-19 pandemic. The team built the
@@ -46,7 +52,7 @@ const About = () => {
           inspired by their mood of the day.
         </p>
       </div>
-    </Container>
+    </div>
   );
 };
 

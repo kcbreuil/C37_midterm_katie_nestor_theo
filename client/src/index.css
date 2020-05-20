@@ -4,7 +4,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Nav Bar  */
+
+.about {
+  padding-bottom: 10rem;
+}
+
 .navBar {
   color: #344960;
   box-shadow: 5px 5px 5px;
@@ -28,6 +32,9 @@
   margin-top: 100px;
   color: #344960;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
 }
 
 .Home {
@@ -44,6 +51,7 @@ form {
 }
 .about-app {
   color: #344960;
+  border: saddlebrown solid 10px;
 }
 
 .book {
@@ -78,6 +86,7 @@ form {
   align-self: center;
 }
 
+/* 
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
@@ -98,11 +107,16 @@ form {
   overflow-y: scroll;
 }
 
+/* Main Page  */
+
 .book {
   display: grid;
   width: 500px;
   border: 1px solid black;
-  margin-left: 300px;
+  margin-left: 450px;
+  padding: 10px;
+  height: 500px;
+  margin-bottom: 10px;
 }
 
 .book-image {
@@ -125,14 +139,13 @@ form {
   grid-column-start: 1;
   grid-column-end: 3;
   align-content: stretch;
+  overflow-y: scroll;
 }
 
 /* Book Details Page */
 .bookDetails {
-  display: grid;
-  text-align: center;
   margin-top: 100px;
-  width: 600px;
+  margin-left: 600px;
 }
 
 .description {
