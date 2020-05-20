@@ -1,10 +1,16 @@
+/* the whole dang ting */
+
 * {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Nav Bar  */
 .navBar {
   color: #344960;
+  box-shadow: 5px 5px 5px;
 }
+
+/* About page  */
 .about-team {
   color: #344960;
   text-align: center;
@@ -101,4 +107,15 @@ form {
   grid-column-start: 1;
   grid-column-end: 3;
   align-content: stretch;
+}
+
+/* Book Details Page */
+.bookDetails {
+  display: grid;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.description {
+  text-align: left;
 }
