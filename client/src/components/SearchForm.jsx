@@ -16,7 +16,7 @@ function SearchForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const url = isFree ? `/books/${search}/free` : `/books/${search}#book_list`;
+    const url = isFree ? `/books/${search}/free` : `/books/${search}`;
     axios.get(url).then((response) => {
       setApiData(response.data.items);
     });
@@ -32,7 +32,7 @@ function SearchForm() {
       return;
     }
     console.log('making request');
-    const url = isFree ? `/books/${search}/free` : `/books/${search}#book_list`;
+    const url = isFree ? `/books/${search}/free` : `/books/${search}`;
     axios.get(url).then((response) => setApiData(response.data.items));
   }, [isFree]);
 
@@ -41,7 +41,7 @@ function SearchForm() {
       <h1>How are you feeling today?</h1>
       <div>
         <div>
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} style={{ marginTop: 15 }}>
             <Form.Group>
               <Form.Control
                 size="lg"
@@ -53,20 +53,30 @@ function SearchForm() {
             </Form.Group>
           </Form>
           <Button
+            className="home-button"
             onClick={toggleAllBooks}
-            variant={isFree ? 'secondary' : 'primary'}
+            style={
+              isFree
+                ? { backgroundColor: '#e3dad0', borderColor: '#e3dad0' }
+                : { backgroundColor: '#344960', borderColor: '#344960' }
+            }
           >
             All
           </Button>
           <Button
+            className="home-button"
             onClick={toggleOnlyFreeBooks}
-            variant={isFree ? 'primary' : 'secondary'}
+            style={
+              isFree
+                ? { backgroundColor: '#344960', borderColor: '#344960' }
+                : { backgroundColor: '#e3dad0', borderColor: '#e3dad0' }
+            }
           >
             Only Free
           </Button>
         </div>
       </div>
-      {apiData.length > 0 ? <BookList books={apiData} /> : null}
+      <BookList books={apiData} />
       <ContextDemo data={apiData} />
     </div>
   );

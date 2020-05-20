@@ -14,8 +14,22 @@
   box-shadow: 5px 5px 5px;
 }
 
+.home-button {
+  margin: 5px;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 /* About page  */
 .about-team {
+  margin-top: 100px;
   color: #344960;
   text-align: center;
   display: flex;
@@ -27,7 +41,7 @@
   color: #344960;
   margin: 'auto';
   text-align: center;
-  /* margin-top: 300px; */
+  margin-top: 300px;
 }
 form {
   max-width: 500px;
@@ -45,7 +59,7 @@ form {
 }
 
 .book-day-header {
-  margin-top: 120px;
+  margin-top: 100px;
   font-weight: bold;
   text-align: center;
   color: #344960;
@@ -54,10 +68,11 @@ form {
 .book-of-day {
   color: #344960;
   background-color: #ddc9be;
+  box-shadow: 5px 5px 5px;
   display: grid;
   grid-gap: 20px;
   padding: 25px;
-  margin: 70px auto;
+  margin: 50px auto;
   width: 700px;
   height: 500px;
 }
@@ -75,7 +90,9 @@ form {
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
-  grid-row: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: center;
 }
 
 .book-day-author {
