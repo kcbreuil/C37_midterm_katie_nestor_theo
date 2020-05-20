@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const BookInfo = () => {
   const [apiData, setApiData] = useState({});
@@ -36,34 +35,30 @@ const BookInfo = () => {
   const preview = apiData.previewLink;
 
   return (
-    <Card
-      className="bookDetails"
-      style={{ width: '18rem', backgroundColor: '#ddc9be' }}
-    >
-      <Card.Img variant="top" src={imgSrc} />
-      <Card.Body>
-        <Card.Title>{detailTitle}</Card.Title>
-        <Card.Title>{subTitle}</Card.Title>
-        <Card.Title>{author}</Card.Title>
-        <Card.Text>
-          <p>{description}</p>
-        </Card.Text>
-      </Card.Body>
-      <ListGroup
-        className="list-group-flush"
-        style={{ backgroundColor: '#ddc9be' }}
-      >
-        <ListGroupItem>{categories}</ListGroupItem>
-        <ListGroupItem>{publisher}</ListGroupItem>
-        <ListGroupItem>{pubDate}</ListGroupItem>
-      </ListGroup>
-      <Card.Body>
-        <Card.Link href={preview} target="_blank">
-          Book Link
-        </Card.Link>
-        <Card.Link href="#">Ebook Link</Card.Link>
-      </Card.Body>
-    </Card>
+    <div>
+      <div className="book-of-day" style={{ marginTop: 150 }}>
+        <div className="book-day-cover">
+          <img src={imgSrc} alt="book cover" />
+        </div>
+        <div className="book-day-title">
+          <p style={{ fontSize: '25px' }}>{detailTitle}</p>
+          <p style={{ fontSize: '20px' }}>{subTitle}</p>
+          <div style={{ fontSize: '13px' }}>By : {author}</div>
+        </div>
+        <div className="book-day-author">
+          <p>{publisher}</p>
+          <p>Page Count: {pageCount}</p>
+          <p style={{ overflowY: 'scroll', maxHeight: 20 }}>{categories}</p>
+          <p>{pubDate}</p>
+          <a href={preview} target="_blank">
+            Book Link
+          </a>
+        </div>
+        <div className="book-day-description">
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+      </div>
+    </div>
   );
 };
 

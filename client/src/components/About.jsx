@@ -8,10 +8,7 @@ import Theo from '../Theo.jpg';
 const About = () => {
   return (
     <div className="about">
-      <h1 style={{ textAlign: 'center',marginTop: '10rem' }}>About the team</h1>
-
       <div className="about-team">
-
         <Row>
           <Col>
             <h1>About the team</h1>
@@ -39,7 +36,6 @@ const About = () => {
             <p>Katie Breuil</p>
           </Col>
         </Row>
-
       </div>
       <br />
       <div className="about-app">
