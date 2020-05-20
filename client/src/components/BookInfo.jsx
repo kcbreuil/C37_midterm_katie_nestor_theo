@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const BookInfo = () => {
   const [apiData, setApiData] = useState({});
@@ -35,21 +36,44 @@ const BookInfo = () => {
   const preview = apiData.previewLink;
 
   return (
-    <div className="bookDetails">
-      <h1>{detailTitle}</h1>
-      <h3>{subTitle}</h3>
-      <h2>{author}</h2>
-      <img src={imgSrc} alt="book cover" />
-      <div className="description">{description}</div>
-      <p>Categories: {categories}</p>
-      <p>Publisher: {publisher}</p>
-      <p>Published Date: {pubDate}</p>
-      <p>Pages: {pageCount}</p>
-      <a href={preview} target="_blank">
-        Preview
-      </a>
-    </div>
+    <Card className="bookDetails" style={{ width: '25rem' }}>
+      <Card.Img variant="top" src={imgSrc} />
+      <Card.Body>
+        <Card.Title>{detailTitle}</Card.Title>
+        <Card.Title>{subTitle}</Card.Title>
+        <Card.Title>{author}</Card.Title>
+        <Card.Text>
+          <p>{description}</p>
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroupItem>Categories: {categories}</ListGroupItem>
+        <ListGroupItem>{publisher}</ListGroupItem>
+        <ListGroupItem>{pubDate}</ListGroupItem>
+      </ListGroup>
+      <Card.Body>
+        <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="#">Another Link</Card.Link>
+      </Card.Body>
+    </Card>
   );
+
+  //   return (
+  //     <div className="bookDetails">
+  //       <h1>{detailTitle}</h1>
+  //       <h3>{subTitle}</h3>
+  //       <h2>{author}</h2>
+  //       <img src={imgSrc} alt="book cover" />
+  //       <p className="description">{description}</p>
+  //       <p>Categories: {categories}</p>
+  //       <p>Publisher: {publisher}</p>
+  //       <p>Published Date: {pubDate}</p>
+  //       <p></p>
+  //       <a href={preview} target="_blank">
+  //         Preview
+  //       </a>
+  //     </div>
+  //   );
 };
 
 export default BookInfo;

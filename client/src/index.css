@@ -39,7 +39,8 @@
 form {
   max-width: 500px;
   margin: auto;
-  /* margin-top: 355px; */
+  margin-top: 355px;
+  background-color: blanchedalmond;
 }
 .about-app {
   color: #344960;
@@ -59,6 +60,7 @@ form {
 .book-of-day {
   color: #344960;
   background-color: #ddc9be;
+  box-shadow: 5px 5px 5px;
   display: grid;
   grid-gap: 20px;
   padding: 25px;
@@ -79,7 +81,9 @@ form {
 .book-day-title {
   font-size: 30px;
   grid-column: 3/3;
-  grid-row: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: center;
 }
 
 .book-day-author {
@@ -128,6 +132,7 @@ form {
   display: grid;
   text-align: center;
   margin-top: 100px;
+  width: 600px;
 }
 
 .description {

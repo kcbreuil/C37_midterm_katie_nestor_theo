@@ -25,7 +25,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navBar" style={{ boxShadow: 'none' }}>
             <Nav.Link href="/book" style={{ color: '#344960' }}>
-              Book Of The Day
+              Random Book
             </Nav.Link>
             <Nav.Link
               href="/about"

@@ -13,17 +13,16 @@ const Book = (props) => {
 
   return (
     <div>
-      <h1 className="book-day-header">Book of the day</h1>
+      <h1 className="book-day-header">Random Book</h1>
       <div className="book-of-day">
         <div className="book-day-cover">
           <img src={bookImg} alt="" />
         </div>
         <div className="book-day-title">
-          <p>{title}</p>
+          <p style={{ fontSize: '25px' }}>{title}</p>
+          <div style={{ fontSize: '13px' }}>By : {author}</div>
         </div>
-        <div className="book-day-author">
-          <p>By : {author}</p>
-        </div>
+        <div className="book-day-author"></div>
         <div className="book-day-description">
           <p>{description}</p>
         </div>
