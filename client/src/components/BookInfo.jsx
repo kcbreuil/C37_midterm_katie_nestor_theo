@@ -65,23 +65,6 @@ const BookInfo = () => {
       </Card.Body>
     </Card>
   );
-
-  //   return (
-  //     <div className="bookDetails">
-  //       <h1>{detailTitle}</h1>
-  //       <h3>{subTitle}</h3>
-  //       <h2>{author}</h2>
-  //       <img src={imgSrc} alt="book cover" />
-  //       <p className="description">{description}</p>
-  //       <p>Categories: {categories}</p>
-  //       <p>Publisher: {publisher}</p>
-  //       <p>Published Date: {pubDate}</p>
-  //       <p></p>
-  //       <a href={preview} target="_blank">
-  //         Preview
-  //       </a>
-  //     </div>
-  //   );
 };
 
 export default BookInfo;
