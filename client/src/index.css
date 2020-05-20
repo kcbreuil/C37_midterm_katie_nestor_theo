@@ -29,8 +29,49 @@ form {
   background-color: #ddc9be;
 }
 
+.book-day-header {
+  margin-top: 120px;
+  font-weight: bold;
+  text-align: center;
+  color: #344960;
+}
+
 .book-of-day {
-  margin-top: 75px;
+  color: #344960;
+  background-color: #ddc9be;
+  display: grid;
+  grid-gap: 20px;
+  padding: 25px;
+  margin: 70px auto;
+  width: 700px;
+  height: 500px;
+}
+
+.book-day-cover {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  text-align: center;
+  align-self: center;
+}
+
+.book-day-title {
+  font-size: 30px;
+  grid-column: 3/3;
+  grid-row: 1;
+}
+
+.book-day-author {
+  grid-column: 3/3;
+  grid-row: 2;
+}
+
+.book-day-description {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 3;
+  overflow-y: scroll;
 }
 /* 
 .book {
