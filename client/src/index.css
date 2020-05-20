@@ -26,6 +26,7 @@ form {
   max-width: 500px;
   margin: auto;
   margin-top: 355px;
+  background-color: blanchedalmond;
 }
 .about-app {
   color: #344960;
@@ -114,6 +115,7 @@ form {
   display: grid;
   text-align: center;
   margin-top: 100px;
+  width: 600px;
 }
 
 .description {
