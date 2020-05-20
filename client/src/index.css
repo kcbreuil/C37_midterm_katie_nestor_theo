@@ -2,12 +2,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.about {
+  padding-bottom: 10rem;
+}
 .navBar {
   color: #344960;
 }
 .about-team {
   color: #344960;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
 }
 
 .Home {
@@ -23,6 +29,7 @@ form {
 }
 .about-app {
   color: #344960;
+  border: saddlebrown solid 10px;
 }
 
 .book {
@@ -32,6 +39,7 @@ form {
 .book-of-day {
   margin-top: 75px;
 }
+
 /* 
 .book {
   display: grid;

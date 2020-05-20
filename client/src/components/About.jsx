@@ -5,30 +5,27 @@ import Col from 'react-bootstrap/Col';
 
 const About = () => {
   return (
-    <Container>
+    <div className="about">
+      <h1 style={{ textAlign: 'center',marginTop: '10rem' }}>About the team</h1>
+
       <div className="about-team">
-        <Row>
-          <Col>
-            <h1>About the team</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <img src="" alt="Theo" />
-            <p>Theodore McLean</p>
-          </Col>
-          <Col>
-            <img src="" alt="Nestor" />
-            <p>Nestor Rivera</p>
-          </Col>
-          <Col>
-            <img src="" alt="Katie" />
-            <p>Katie Breuil</p>
-          </Col>
-        </Row>
+        <div>
+          <img src="" alt="Theo" />
+          <p>Theodore McLean</p>
+        </div>
+        <div>
+          <img src="" alt="Nestor" />
+          <p>Nestor Rivera</p>
+        </div>
+        <div>
+          <img src="" alt="Katie" />
+          <p>Katie Breuil</p>
+        </div>
       </div>
       <br />
       <div className="about-app">
+        <div class="aboutapp"></div>
+
         <h1>About the App</h1>
 
         <p>
@@ -38,7 +35,7 @@ const About = () => {
           you pick up books based upon your mood of the day.
         </p>
       </div>
-    </Container>
+    </div>
   );
 };
 
