@@ -19,7 +19,7 @@ const Book = (props) => {
           <img src={bookImg} alt="" />
         </div>
         <div className="book-day-title">
-          <p style={{ fontSize: '25px' }}>{title}</p>
+          <p style={{ fontSize: '22px' }}>{title}</p>
           <div style={{ fontSize: '13px' }}>By : {author}</div>
         </div>
         <div className="book-day-author"></div>

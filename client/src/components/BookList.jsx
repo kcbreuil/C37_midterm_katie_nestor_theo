@@ -10,6 +10,7 @@ const BookList = (props) => (
       const title = book.volumeInfo.title;
       const author = (book.volumeInfo.authors || []).join(', ');
       const description = book.volumeInfo.description;
+      const subTitle = book.volumeInfo.subtitle;
       let bookImageSrc = '';
       if (book.volumeInfo.imageLinks) {
         bookImageSrc = book.volumeInfo.imageLinks.thumbnail;
@@ -28,11 +29,9 @@ const BookList = (props) => (
             </a>
           </div>
           <div className="book-details">
-            <p>{title}</p>
-            <p>{author}</p>
-          </div>
-          <div className="book-description">
-            <p style={{ overflowY: 'scroll' }}>{description}</p>
+            <p style={{ fontSize: '22px' }}>{title}</p>
+            <p style={{ fontSize: '18px' }}>{subTitle}</p>
+            <div style={{ fontSize: '13px' }}>By : {author}</div>
           </div>
         </div>
       );

@@ -46,7 +46,7 @@ function SearchForm() {
               <Form.Control
                 size="lg"
                 type="text"
-                placeholder="Type your Mood."
+                placeholder="Tell us all your secrets..."
                 value={search}
                 onChange={handleChange}
               />
