@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button
-} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import logo from '../icon.png';
 
 function NavBar() {
   return (
@@ -19,7 +13,7 @@ function NavBar() {
       <Navbar.Brand style={{ color: '#344960' }} href="/">
         <img
           alt=""
-          src="./client/public/icon.png"
+          src={logo}
           width="30"
           height="30"
           className="d-inline-block align-top"
