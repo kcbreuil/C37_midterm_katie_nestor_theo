@@ -33,7 +33,7 @@ const App = () => {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/book/:id/:name">
+      <Route path="/book/:id/">
         <BookInfo />
       </Route>
     </BrowserRouter>
