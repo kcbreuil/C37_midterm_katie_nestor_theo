@@ -40,7 +40,7 @@ const BookInfo = () => {
       <h3>{subTitle}</h3>
       <h2>{author}</h2>
       <img src={imgSrc} alt="book cover" />
-      <p className="description">{description}</p>
+      <div className="description">{description}</div>
       <p>Categories: {categories}</p>
       <p>Publisher: {publisher}</p>
       <p>Published Date: {pubDate}</p>
