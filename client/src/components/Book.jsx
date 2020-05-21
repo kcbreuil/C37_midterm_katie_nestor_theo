@@ -8,7 +8,10 @@ const Book = (props) => {
   }
   const title = props.book.volumeInfo.title;
   const author = props.book.volumeInfo.authors;
-  const bookImg = props.book.volumeInfo.imageLinks.thumbnail;
+  let bookImg = '';
+  if (props.book.volumeInfo.imageLinks) {
+    bookImg = props.book.volumeInfo.imageLinks.thumbnail;
+  }
   const description = props.book.volumeInfo.description;
 
   return (

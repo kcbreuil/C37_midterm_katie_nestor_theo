@@ -6,7 +6,6 @@ const BookList = (props) => (
       console.log(props.books);
       const title = book.volumeInfo.title;
       const author = (book.volumeInfo.authors || []).join(', ');
-      const description = book.volumeInfo.description;
       const subTitle = book.volumeInfo.subtitle;
       let bookImageSrc = '';
       if (book.volumeInfo.imageLinks) {
@@ -15,7 +14,6 @@ const BookList = (props) => (
 
       return (
         <div className="book">
-          <a id="book_list" />
           <div className="book-image">
             <a href={`/book/${book.id}`}>
               <img src={bookImageSrc} alt="" />
