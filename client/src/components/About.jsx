@@ -48,7 +48,7 @@ const About = () => {
 
       <hr
         style={{
-          marginTop: 40,
+          marginTop: 20,
           width: 800,
           borderColor: '#344960',
           boxShadow: 5
