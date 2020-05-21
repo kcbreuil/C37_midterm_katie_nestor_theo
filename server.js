@@ -7,17 +7,7 @@ const axios = require('axios');
 const path = require('path');
 const app = express();
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
-// END DEMO
-
-// here I go again on my own //
-
-// https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=AIzaSyBxskadGRKcKvpfgS9MjPyyfOJ3rGcxy4M
+// Used axios to call our API here.  //
 
 app.get('/books/:theme/:free?', async (req, res) => {
   const requestUrl = req.params.free
