@@ -20,9 +20,9 @@ In early January 2020, COVID-19 began to sweep the globe. Shortly therafter, man
 
 ## WHO
 
--Nestor Rivera, Web/Dev Cohort 37 student at Wyncode, Air Force Reservist expanding robust skill set to include fullstack web development. Github: https://github.com/nhrivera
--Theo Mclean: Web/Dev Cohort 37 student at Wyncode, attending Florida International University for Building Engineering, and part-time stock trader.
--Katie Breuil, Web/Dev Cohort 37 student at Wyncode, transitioning to the role of web developer after her years in the arts nonprofit and for profit sectors including roles in marketing, communications, event and project management.
+- Nestor Rivera, Web/Dev Cohort 37 student at Wyncode, Air Force Reservist expanding robust skill set to include fullstack web development. Github: https://github.com/nhrivera
+- Theo Mclean: Web/Dev Cohort 37 student at Wyncode, attending Florida International University for Building Engineering, and part-time stock trader.
+- Katie Breuil, Web/Dev Cohort 37 student at Wyncode, transitioning to the role of web developer after her years in the arts nonprofit and for profit sectors including roles in marketing, communications, event and project management.
 
 ## HOW
 
